@@ -1,0 +1,14 @@
+[
+    {
+        "task": "Design a SQL query to retrieve all records from a 'users' table where the age is greater than 30.",
+        "done": false
+    },
+    {
+        "task": "Make a portfolio using react and tailwindcss, make sure its responsible",
+        "done": false
+    },
+    {
+        "task": "Design a full external assembly for a 8 bit cpu, with python and function",
+        "done": false
+    }
+]
