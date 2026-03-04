@@ -11,4 +11,12 @@
         "task": "Design a full external assembly for a 8 bit cpu, with python and function",
         "done": false
     }
+    {
+        "task": "Make a fullstack web only using vanilla programming language",
+        "done": false
+    }
+    {
+        "task": "Design a 8 bit CPU, with predicting branch and 8 way lru cache",
+        "done": false
+    }
 ]
