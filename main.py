@@ -23,7 +23,8 @@ while on :
     print("2. Add Task")
     print("3. Remove Task")
     print("4. Mark Done")
-    print("5. Exit")
+    print("5. Update Task")
+    print("6. Exit")
     print()
     choice = input("Enter your choice: ")
     if choice == "1": # liat tasks
@@ -64,7 +65,19 @@ while on :
             with open(FILE_PATH, 'w') as file: # save json AAAAAAAAAAAAAAAAAAAAA
                 json.dump(tasks, file, indent=4)
         print("Task is successfully marked as done!")
-    elif choice == "5": # keluar
+    elif choice == "5": # update task
+        print('Current Tasks:')
+        for i in tasks: # print tasks sekarang
+            status = "Done" if i['done'] else "Not Done"
+            print(f"{tasks.index(i)+1}. {i['task']} - {status}")
+        task_number = input("Enter the task number to update: ")
+        if task_number.isdigit() and 1 <= int(task_number) <= len(tasks): # kalau input vaild boleh gak valid keluar
+            new_task = input("Enter the updated task: ")
+            tasks[int(task_number) -1]['task'] = new_task # update task, -1 karena index mulai dari 0
+            with open(FILE_PATH, 'w') as file: # save json AAAAAAAAAAAAAAAAAAAAA
+                json.dump(tasks, file, indent=4)
+        print("Task is successfully marked as done!")
+    elif choice == "6": # keluar
         print("Exiting...")
         sleep(1)
         on = False
